@@ -1,9 +1,10 @@
 import React from 'react';
+import Users from './components/Users/Users';
 
 const App = () => {
   return (
     <div className="App">
-      Hello world
+      <Users />
     </div>
   );
 }
