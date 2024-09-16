@@ -1,5 +1,6 @@
 import React from 'react';
 import Users from './components/Users/Users';
+import './global.scss';
 
 const App = () => {
   return (

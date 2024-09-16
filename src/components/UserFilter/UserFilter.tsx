@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './UserFilter.module.scss';
 
 interface UserFilterProps {
   nameFilter: string;
@@ -22,7 +23,7 @@ const UserFilter: React.FC<UserFilterProps> = ({
   setPhoneFilter,
 }) => {
   return (
-    <div>
+    <div className={styles.userFilter}>
       <input
         type="text"
         placeholder="Filter by name"

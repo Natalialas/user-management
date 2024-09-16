@@ -1,5 +1,6 @@
 import React from 'react';
 import { User } from '../../types/userTypes';
+import styles from './UserRow.module.scss';
 
 interface UserRowProps {
   user: User;
@@ -7,11 +8,11 @@ interface UserRowProps {
 
 const UserRow: React.FC<UserRowProps> = ({ user }) => {
   return (
-    <tr>
-      <td>{user.name}</td>
-      <td>{user.username}</td>
-      <td>{user.email}</td>
-      <td>{user.phone}</td>
+    <tr className={styles.userRow}>
+      <td data-label="Name">{user.name}</td>
+      <td data-label="Username">{user.username}</td>
+      <td data-label="Email">{user.email}</td>
+      <td data-label="Phone">{user.phone}</td>
     </tr>
   );
 };
