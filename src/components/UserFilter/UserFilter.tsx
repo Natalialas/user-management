@@ -1,52 +1,39 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppState } from '../../redux/store';
+import { setNameFilter, setUsernameFilter, setEmailFilter, setPhoneFilter } from '../../redux/actions/userActions';
 import styles from './UserFilter.module.scss';
 
-interface UserFilterProps {
-  nameFilter: string;
-  setNameFilter: (value: string) => void;
-  usernameFilter: string;
-  setUsernameFilter: (value: string) => void;
-  emailFilter: string;
-  setEmailFilter: (value: string) => void;
-  phoneFilter: string;
-  setPhoneFilter: (value: string) => void;
-}
+const UserFilter: React.FC = () => {
+  const dispatch = useDispatch();
+  
+  const { nameFilter, usernameFilter, emailFilter, phoneFilter } = useSelector((state: AppState) => state.user);
 
-const UserFilter: React.FC<UserFilterProps> = ({
-  nameFilter,
-  setNameFilter,
-  usernameFilter,
-  setUsernameFilter,
-  emailFilter,
-  setEmailFilter,
-  phoneFilter,
-  setPhoneFilter,
-}) => {
   return (
     <div className={styles.userFilter}>
       <input
         type="text"
         placeholder="Filter by name"
         value={nameFilter}
-        onChange={(e) => setNameFilter(e.target.value)}
+        onChange={(e) => dispatch(setNameFilter(e.target.value))}
       />
       <input
         type="text"
         placeholder="Filter by username"
         value={usernameFilter}
-        onChange={(e) => setUsernameFilter(e.target.value)}
+        onChange={(e) => dispatch(setUsernameFilter(e.target.value))}
       />
       <input
         type="text"
         placeholder="Filter by email"
         value={emailFilter}
-        onChange={(e) => setEmailFilter(e.target.value)}
+        onChange={(e) => dispatch(setEmailFilter(e.target.value))}
       />
       <input
         type="text"
         placeholder="Filter by phone"
         value={phoneFilter}
-        onChange={(e) => setPhoneFilter(e.target.value)}
+        onChange={(e) => dispatch(setPhoneFilter(e.target.value))}
       />
     </div>
   );
