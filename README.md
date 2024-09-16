@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# User Management Table
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+A React application for managing and displaying user data fetched from a mock API. The app supports advanced filtering by name, username, email, and phone. The project utilizes Redux for state management and TypeScript for ensuring type safety.
+
+## Features
+
+- **User Management Table**: Displays user data (name, username, email, phone) fetched from a mock API.
+- **Advanced Filtering**: Search and filter users by name, username, email, or phone with real-time updates.
+- **State Management**: Utilizes Redux for managing user data and filter states.
+- **Type Safety**: Entire project is written in TypeScript for static typing and better developer experience.
+
+## Demo
+
+[(link here)]
+
+## Technologies Used
+
+- **React**: Library for building user interfaces.
+- **Redux**: State management library.
+- **TypeScript**: Strongly typed superset of JavaScript.
+- **SCSS**: CSS preprocessor for styling.
+- **JSONPlaceholder**: Mock API service used to fetch user data.
+
+## Installation and Setup
+
+To run the application locally, follow these steps:
+
+### 1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-repo-link.git
+    cd your-repo-directory
+    ```
+
+### 2. Install the dependencies:
+    ```bash
+    npm install
+    ```
+
+### 3. Start the development server:
+    ```bash
+    npm start
+    ```
+   The application will be available at `http://localhost:3000`.
+
+## Usage
+
+1. Open the application in your browser.
+2. The table will display user information such as name, username, email, and phone.
+3. Use the filter inputs to search users by name, username, email, or phone.
+4. The table will automatically update to show the filtered results.
+
+## Project Structure
+
+- **src/components**: Contains the React components such as `UserFilter`, `UserTable`, and `UserRow`.
+- **src/redux**: Contains Redux-related code including actions, reducers, and store configuration.
+- **src/types**: Contains TypeScript interfaces and types for better type management.
+- **src/styles**: SCSS stylesheets for styling the application.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+- **`npm start`**: Runs the app in development mode.
+- **`npm test`**: Launches the test runner in interactive watch mode.
+- **`npm run build`**: Builds the app for production to the `build` folder.
+- **`npm run eject`**: Ejects the app from `react-scripts` for advanced customization.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Future Improvements
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Add tests for components and Redux logic.
+- Improve UI/UX for better user experience.
 
-### `npm test`
+## License
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the MIT License.
